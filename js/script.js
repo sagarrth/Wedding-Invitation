@@ -48,24 +48,28 @@ $(document).ready(function(){
 		}
 	}, 1000);
 
-	const button = document.querySelector(".happiness");
-	const config = {
-		angle: 90,
-		spread: 360,
-		startVelocity: 40,
-		elementCount: 100,
-		dragFriction: 0.12,
-		duration: 5000,
-		stagger: 12,
-		width: "12px",
-		height: "12px",
-		perspective: "500px",
-		colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
-		random: Math.random
-	};
-	button.addEventListener("click", () => confetti(button, config));
-  setTimeout(() => {
-    console.error(confetti);
-  }, 100)
+  const randomInRange = (min, max) => Math.random() * (max - min) + min;
+
+  const button = document.querySelector(".happiness");
+	button.addEventListener("click", () => {
+    const duration = 5 * 1000;
+    const animationEnd = Date.now() + duration;
+    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+    const interval = setInterval(function() {
+      const timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      const particleCount = 50 * (timeLeft / duration);
+      // since particles fall down, start a bit higher than random
+      confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+      confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+    }, 250);
+  });
+
+  // leaves falling animation
 	$('.sakura-falling').sakura();
 });
