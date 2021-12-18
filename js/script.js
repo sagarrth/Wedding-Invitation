@@ -64,6 +64,8 @@ $(document).ready(function(){
 		random: Math.random
 	};
 	button.addEventListener("click", () => confetti(button, config));
-
+  setTimeout(() => {
+    console.error(confetti);
+  }, 100)
 	$('.sakura-falling').sakura();
 });
