@@ -335,118 +335,17 @@
 	}
 }
 
-.sakura {
-	/* background: -webkit-linear-gradient(120deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9));
-    background: linear-gradient(120deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9));*/
-	background: red;
-	pointer-events: none;
-	position: absolute
-}
-
-.sakura {
-	background: #674ea7;
-}
-
+/*******************************/
 
 /*******************************/
 
-body {
-	font-family: Arial, Helvetica, Sans-serif;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
-}
-
-@media (max-width:900px) {
-	img {
-		max-width: 30%;
-	}
-}
-
-.top-right-decoration {
-	position: absolute;
-	top: 0;
-	right: 0;
-	display: block;
-}
-
-.top-left-decoration {
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-}
-
-.title h1 {
-	font-family: 'Dancing Script', cursive;
-	font-weight: bold;
-	font-style: normal;
-	font-size: 60px;
-	margin: 32px 0;
-	color: #674ea7;
-}
-
-.title h2 {
-	font-family: 'Dancing Script', cursive;
-	font-weight: bold;
-	font-style: normal;
-	margin: 0;
-	padding: 0;
-	font-size: 24px;
-	color: #e25c67;
-	line-height: 1;
-}
-
-.dance-med {
-	font-family: 'Dancing Script', cursive;
-	font-weight: bolder;
-	font-style: normal;
-	font-size: 32px;
-	color: #674ea7;
-	margin: 16px;
-	text-align: center;
-}
-
-.title h3 {
-	font-weight: 300;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	font-size: 24px;
-	color: #674ea7;
-	margin-top: 5px;
-}
-
-.title p {
-	color: #564861;
-	margin: 30px 0 20px;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	font-size: 16px;
-}
-
-.wrap {
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-align-items: center;
-	align-items: center;
-	/* padding: 20px; */
-	text-align: center;
-	/* min-height:100%; */
-}
-
-
-/** **/
-
 * {
-	/* margin: 0;
-    padding: 0; */
 	font-family: 'Arvo', serif;
+  --purple: #674ea7;
+  --red: #e25c67;
+  --maroon: #874562;
+  --white: #fff;
+  --smoke: #eee;
 }
 
 body {
@@ -458,33 +357,182 @@ body {
 	flex-direction: column;
 }
 
+.sakura {
+	background: var(--maroon);
+	pointer-events: none;
+	position: absolute;
+  z-index: 99;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+@media (max-width:900px) {
+	.decoration {
+		max-width: 30%;
+	}
+}
+
+.decoration {
+  display: block;
+	position: absolute;
+  top: 0;
+}
+
+.top-left {
+	left: 0;
+}
+
+.top-right {
+	right: 0;
+}
+
 .title {
-	margin-bottom: 40px;
+	text-align: center;
+  margin-bottom: 24px;
+}
+
+.title h1 {
+	font-family: 'Dancing Script', cursive;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 3rem;
+	margin: 24px 0;
+	color: var(--maroon);
+}
+
+.title h2 {
+	font-family: 'Dancing Script', cursive;
+	font-weight: bold;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+	color: var(--purple);
+	line-height: 1;
+}
+
+.title h3 {
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 24px;
+	color: var(--maroon);
+	margin-top: 5px;
+}
+
+.title p {
+	color: #564861;
+	margin: 30px 0 20px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 16px;
+}
+
+.date {
+	color: var(--purple);
+	font-weight: 900;
+}
+
+.place {
+	color: var(--purple);
+	font-weight: 900;
+}
+
+.dance-med {
+	font-family: 'Dancing Script', cursive;
+	font-weight: bolder;
+	font-style: normal;
+	font-size: 2rem;
+	color: var(--maroon);
+	margin: 16px;
+	text-align: center;
 }
 
 #time {
-	width: auto;
-	height: auto;
+  margin: 24px 0;
 	padding: 20px;
-	background-color: #eee;
+	background-color: var(--smoke);
 	border-radius: 20px;
-	font-size: 16px;
+	font-size: 1rem;
+  color: var(--maroon);
+	
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid var(--maroon);
+  padding: 0 4px;
+}
+
+.unit:last-child {
+  border-right: none;
+}
+
+.unit div:first-child {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.unit div:last-child {
+  font-size: 0.8rem;
+}
+
+#card-slider {
+  margin-top: 32px;
+  height: 80vh;
+  width: 50vw;
+}
+
+@media screen and (max-width: 767px) {
+  #card-slider {
+    height: 80vh;
+    width: 100vw;
+    padding: 4px;
+  }
+}
+
+#card-slider .card-container {
+  height: 100%;
+  width: 100%;
+}
+
+#card-slider img {
+  /* border: 5px solid #fff; */
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.slick-list {
+  height: 100%;
+}
+
+.slick-track {
+  height: 100%;
 }
 
 .venue {
 	width: auto;
 	height: auto;
-	background-color: #674ea7;
-	border-radius: 16px;
+	background-color: var(--maroon);
+	border-radius: 1rem;
 	text-align: center;
-	color: #fff;
+	color: var(--white);
 	padding: 8px;
 	margin-right: 8px;
 }
 
 .venue a {
 	text-decoration: none;
-	color: #fff;
+	color: var(--white);
 }
 
 .container {
@@ -504,32 +552,6 @@ body {
 	color: #fff;
 }
 
-.days {
-	background: linear-gradient(90deg, #b33a46, #9b313c);
-}
-
-.hours {
-	background: linear-gradient(90deg, #a7c3cd, #90a9b2);
-}
-
-.minutes {
-	background-color: #874562;
-}
-
-.seconds {
-	background-color: #145689;
-}
-
-.date {
-	color: #874562;
-	font-weight: 900;
-}
-
-.place {
-	color: #874562;
-	font-weight: 900;
-}
-
 .footer {
 	color: #564861;
 	text-align: center;
@@ -547,9 +569,8 @@ body {
 	padding: 12px;
 	background: linear-gradient(90deg, #b33a46, #9b313c);
 	border-radius: 20px;
-	font-size: 14px;
 	color: #fff;
-	font-size: 24px;
+	font-size: 1.5rem;
 }
 
 a {
@@ -557,23 +578,19 @@ a {
 }
 
 .happiness {
-	color: #874562;
-	font-size: 24px;
+	color: var(--maroon);
+	font-size: 2rem;
 	font-weight: bold;
 	text-align: center;
-	margin-bottom: 24px;
+	margin: 24px;
 }
 
 .twitter {
 	color: #874562;
 }
 
-.music {
-	display: none;
-}
-
 .actions {
 	display: flex;
-	font-size: 12px;
+	font-size: 0.8rem;
 	letter-spacing: 0pt;
 }
