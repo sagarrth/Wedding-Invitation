@@ -348,8 +348,6 @@
 
 /*******************************/
 
-/*******************************/
-
 * {
 	font-family: 'Arvo', serif;
   --purple: #674ea7;
@@ -357,14 +355,13 @@
   --maroon: #874562;
   --white: #fff;
   --smoke: #eee;
+  --gray: #564861;
 }
 
 body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* height: 100vh;
-    width: 100%; */
 	flex-direction: column;
 }
 
@@ -435,7 +432,7 @@ img {
 }
 
 .title p {
-	color: #564861;
+	color: var(--gray);
 	margin: 30px 0 20px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
@@ -463,7 +460,7 @@ img {
 }
 
 #time {
-  margin: 24px 0;
+  margin: 0 0 24px;
 	padding: 20px;
 	background-color: var(--smoke);
 	border-radius: 20px;
@@ -542,6 +539,87 @@ button.slick-arrow {
   border-radius: 50%;
 }
 
+section.info {
+  display: flex;
+  flex-direction: row;
+  max-width: 100rem;
+  margin: 8rem auto;
+}
+
+section.info article {
+  margin: 0 4rem;
+  width: calc(50% - 8rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--gray);
+}
+
+section.info h3 {
+  font-family: 'Dancing Script', cursive;
+  color: var(--maroon);
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem auto;
+}
+
+section.info p {
+  font-size: 1.5rem;
+}
+
+section.info .highlight {
+  filter: drop-shadow(2px 4px 2px var(--red));
+  font-weight: bold;
+}
+
+section.info img {
+  width: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 60vh;
+  opacity: .9;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)!important;
+  border-radius: 8px;
+  border: 1rem solid var(--smoke);
+  border-right-width: 6rem;
+  transform: rotate(2deg);
+}
+
+@media only screen and (max-width: 900px) {
+  section.info {
+    max-width: unset;
+    width: calc(100% - 4rem);
+    flex-direction: column;
+    margin: 0 auto 3rem;
+  }
+
+  section.info article {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  section.info h3 {
+    font-size: 2.5rem;
+  }
+
+  section.info p {
+    font-size: 1rem;
+  }
+
+  section.info img {
+    margin-top: 2rem;
+    width: calc(100% - 8rem);
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: auto;
+  }
+}
+
 .actions {
 	display: flex;
 	font-size: 0.8rem;
@@ -567,7 +645,7 @@ button.slick-arrow {
 }
 
 .footer {
-	color: #564861;
+	color: var(--gray);
 	text-align: center;
 	font-size: 16px;
 	margin: 24px;
@@ -650,6 +728,6 @@ a {
 }
 
 .showBtn {
-  opacity: 1;
+  opacity: 0.85;
   transform: translateY(0);
 }
