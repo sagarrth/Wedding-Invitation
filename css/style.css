@@ -612,3 +612,44 @@ a {
     font-size: 1.1rem;
   }
 }
+
+.scrollToTopBtn {
+  background-color: var(--maroon);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px;
+
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 100px;
+  right: 10px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 425px) {
+  .scrollToTopBtn {
+    bottom: 110px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .scrollToTopBtn {
+    right: 30px;
+  }
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
