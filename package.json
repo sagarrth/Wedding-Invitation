@@ -22,5 +22,10 @@
     "@parcel/compressor-gzip": "^2.0.1",
     "parcel": "^2.0.1"
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead"
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "dependencies": {
+    "canvas-confetti": "^1.4.0",
+    "jquery-slim": "^3.0.0",
+    "slick-carousel": "^1.8.1"
+  }
 }
