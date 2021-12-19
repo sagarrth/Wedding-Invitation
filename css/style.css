@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 @-webkit-keyframes fall {
 	0% {
 		opacity: 0.9;
@@ -436,7 +440,7 @@ img {
 	margin: 30px 0 20px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	font-size: 16px;
+	font-size: 1.2rem;
 }
 
 .date {
