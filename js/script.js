@@ -2,6 +2,7 @@ import $ from "jquery";
 import confetti from "canvas-confetti";
 import 'slick-carousel';
 import Sakura from './jquery-sakura';
+import smoothscroll from 'smoothscroll-polyfill';
 
 function attachSaveTheDateCounter() {
   // Set the date we're counting down to
@@ -114,3 +115,5 @@ var sakura = new Sakura('body');
 attachConfettiLogic();
 // scroll to top logic
 attachScrollToTopLogic();
+// kick off the polyfill!
+smoothscroll.polyfill();
