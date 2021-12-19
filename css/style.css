@@ -440,7 +440,7 @@ img {
 	margin: 30px 0 20px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	font-size: 1.2rem;
+	font-size: 1rem;
 }
 
 .date {
@@ -727,7 +727,7 @@ a {
 
 @media screen and (max-width: 425px) {
   .scrollToTopBtn {
-    bottom: 110px;
+    bottom: 150px;
   }
 }
 

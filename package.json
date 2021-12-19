@@ -1,0 +1,26 @@
+{
+  "name": "wedding-invitation",
+  "version": "1.0.0",
+  "description": "website for our marriage",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagarrth/Wedding-Invitation.git"
+  },
+  "author": "Sagar Rout",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sagarrth/Wedding-Invitation/issues"
+  },
+  "homepage": "https://github.com/sagarrth/Wedding-Invitation#readme",
+  "devDependencies": {
+    "@parcel/compressor-brotli": "^2.0.1",
+    "@parcel/compressor-gzip": "^2.0.1",
+    "parcel": "^2.0.1"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}
