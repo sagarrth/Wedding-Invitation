@@ -172,7 +172,7 @@ img {
   box-shadow: 5px 10px 20px 0px rgba(0,0,0,0.75);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
   #card-slider {
     height: 80vh;
     width: 100vw;
