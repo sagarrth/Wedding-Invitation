@@ -110,7 +110,15 @@ $('#card-slider').slick({
   arrows: screen.width >= 768
 });
 // // leaves falling animation
-var sakura = new Sakura('body');
+var sakura = new Sakura('body', {
+  colors: [
+    {
+      gradientColorStart: '#874562',
+      gradientColorEnd: '#564861',
+      gradientColorDegree: 120
+    }
+  ]
+});
 // confetti logic
 attachConfettiLogic();
 // scroll to top logic

@@ -35,7 +35,6 @@ body {
 }
 
 .sakura {
-	background: var(--maroon);
   z-index: 99;
 }
 
