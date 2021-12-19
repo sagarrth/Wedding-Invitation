@@ -653,8 +653,12 @@ section.info img {
 .footer {
 	color: var(--gray);
 	text-align: center;
-	font-size: 16px;
-	margin: 24px;
+	font-size: 1rem;
+	margin: 32px 24px 24px;
+}
+
+.love {
+  margin-top: 0;
 }
 
 .end-msg {
