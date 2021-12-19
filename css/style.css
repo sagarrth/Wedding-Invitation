@@ -582,10 +582,11 @@ section.info img {
   object-fit: cover;
   height: 60vh;
   opacity: .9;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)!important;
-  border-radius: 8px;
-  border: 1rem solid var(--smoke);
-  border-right-width: 6rem;
+  -webkit-box-shadow: 5px 10px 20px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 5px 10px 20px 0px rgba(0,0,0,0.75);
+  box-shadow: 5px 10px 20px 0px rgba(0,0,0,0.75);
+  border: 2rem solid var(--smoke);
+  border-bottom-width: 5rem;
   transform: rotate(2deg);
 }
 
@@ -617,7 +618,8 @@ section.info img {
 
   section.info img {
     margin-top: 2rem;
-    width: calc(100% - 8rem);
+    width: calc(100% - 2rem);
+    border-width: 1rem 1rem 3rem 1rem;
     -o-object-fit: cover;
     object-fit: cover;
     height: auto;
