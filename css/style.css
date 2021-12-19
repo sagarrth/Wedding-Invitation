@@ -1,4 +1,6 @@
 @import url('./jquery-sakura.css');
+@import url('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+@import url('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css');
 
 * {
 	font-family: 'Arvo', serif;
