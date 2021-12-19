@@ -105,23 +105,25 @@ $('#card-slider').slick({
   fade: true,
   cssEase: 'linear',
   mobileFirst: true,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 2500,
   arrows: screen.width > 900
 });
 // // leaves falling animation
-// var sakura = new Sakura('body', {
-//   colors: [
-//     {
-//       gradientColorStart: '#874562',
-//       gradientColorEnd: '#564861',
-//       gradientColorDegree: 120
-//     }
-//   ]
-// });
+var sakura = new Sakura('body', {
+  colors: [
+    {
+      gradientColorStart: '#874562',
+      gradientColorEnd: '#564861',
+      gradientColorDegree: 120
+    }
+  ]
+});
 // confetti logic
 attachConfettiLogic();
 // scroll to top logic
 attachScrollToTopLogic();
 // kick off the polyfill!
 smoothscroll.polyfill();
+// play audio
+document.addEventListener('click', () => document.getElementById("my_audio").play(), {once: true});

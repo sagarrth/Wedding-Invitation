@@ -403,3 +403,7 @@ a {
   opacity: 0.85;
   transform: translateY(0);
 }
+
+.music {
+	display: none;
+}
