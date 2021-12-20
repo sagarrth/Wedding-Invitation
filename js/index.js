@@ -126,4 +126,4 @@ attachScrollToTopLogic();
 // kick off the polyfill!
 smoothscroll.polyfill();
 // play audio
-document.addEventListener('scroll', () => document.getElementById("my_audio").play(), {once: true});
+document.addEventListener('click', () => document.getElementById("my_audio").play(), {once: true});
