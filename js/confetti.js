@@ -5,20 +5,20 @@ export default function initConfettiLogic() {
   const randomInRange = (min, max) => Math.random() * (max - min) + min;
   const button = document.querySelector(".happiness");
   const claps = document.querySelector("#claps");
-  let data = 0;
+  let data;
 
   const db = getDatabase();
   const clapsCountRef = ref(db, 'claps/');
   onValue(clapsCountRef, (snapshot) => {
     data = snapshot.val();
-    claps.textContent = data;
+    claps.textContent = `(${data})`;
   });
 
   
   button.addEventListener("click", () => {
-
-    set(ref(db, 'claps'), data+1);
-
+    if (data !== undefined) {
+      set(ref(db, 'claps'), data+1);
+    }
     const duration = 5 * 1000;
     const animationEnd = Date.now() + duration;
     const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
