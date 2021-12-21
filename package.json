@@ -25,6 +25,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "dependencies": {
     "canvas-confetti": "^1.4.0",
+    "firebase": "^9.6.1",
     "jquery-slim": "^3.0.0",
     "slick-carousel": "^1.8.1",
     "smoothscroll-polyfill": "^0.4.4"
