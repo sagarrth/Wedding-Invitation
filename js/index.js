@@ -8,6 +8,8 @@ import initSaveTheDateCounter from './countdown';
 import initConfettiLogic from './confetti';
 import initScrollToTopLogic from './scrollToTop';
 
+const params = new URLSearchParams(location.search);
+
 // counter logic
 initSaveTheDateCounter();
 // slider logic
@@ -39,4 +41,5 @@ initScrollToTopLogic();
 // kick off the polyfill!
 smoothscroll.polyfill();
 // play audio
-document.addEventListener('click', () => document.getElementById('my_audio').play(), {once: true});
+if (!params.get('stopMusic'))
+  document.addEventListener('click', () => document.getElementById('my_audio').play(), {once: true});
