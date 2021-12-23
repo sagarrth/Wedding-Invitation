@@ -7,6 +7,7 @@ import './firebase';
 import initSaveTheDateCounter from './countdown';
 import initConfettiLogic from './confetti';
 import initScrollToTopLogic from './scrollToTop';
+import initDirections from './directions';
 
 const params = new URLSearchParams(location.search);
 
@@ -43,3 +44,5 @@ smoothscroll.polyfill();
 // play audio
 if (!params.get('stopMusic'))
   document.addEventListener('click', () => document.getElementById('my_audio').play(), {once: true});
+// custom directions
+initDirections();
