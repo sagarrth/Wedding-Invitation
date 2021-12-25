@@ -43,6 +43,10 @@ initScrollToTopLogic();
 smoothscroll.polyfill();
 // play audio
 if (!params.get('stopMusic'))
-  document.addEventListener('click', () => document.getElementById('my_audio').play(), {once: true});
+  document.addEventListener('click', () => {
+    const audioElement = document.getElementById('my_audio');
+    audioElement.play();
+    setTimeout(() => audioElement.pause(), 15000);
+  }, {once: true});
 // custom directions
 initDirections();
