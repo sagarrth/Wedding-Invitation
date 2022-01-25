@@ -140,6 +140,16 @@ img {
   box-shadow: 5px 10px 20px 0px rgba(0,0,0,0.75);
 }
 
+.blessed {
+  display: flex;
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: var(--gray);
+  -webkit-box-shadow: unset;
+  -moz-box-shadow: unset;
+  box-shadow: unset;
+}
+
 .unit {
   display: flex;
   flex-direction: column;

@@ -12,7 +12,7 @@ import initDirections from './directions';
 const params = new URLSearchParams(location.search);
 
 // counter logic
-initSaveTheDateCounter();
+// initSaveTheDateCounter();
 // slider logic
 $('#card-slider').slick({
   dots: true,
@@ -42,11 +42,11 @@ initScrollToTopLogic();
 // kick off the polyfill!
 smoothscroll.polyfill();
 // play audio
-if (!params.get('stopMusic'))
-  document.addEventListener('click', () => {
-    const audioElement = document.getElementById('my_audio');
-    audioElement.play();
-    setTimeout(() => audioElement.pause(), 15000);
-  }, {once: true});
+// if (!params.get('stopMusic'))
+//   document.addEventListener('click', () => {
+//     const audioElement = document.getElementById('my_audio');
+//     audioElement.play();
+//     setTimeout(() => audioElement.pause(), 15000);
+//   }, {once: true});
 // custom directions
 initDirections();
